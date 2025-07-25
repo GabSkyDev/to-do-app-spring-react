@@ -1,9 +1,6 @@
 package com.GabSkyDev.to_do_list.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Task {
@@ -13,6 +10,7 @@ public class Task {
     private String name;
     private String description;
     private Boolean state;
+    @Enumerated(EnumType.STRING)
     private Priority priority;
 
     public Task(){}

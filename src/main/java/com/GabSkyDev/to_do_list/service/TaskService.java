@@ -3,6 +3,7 @@ package com.GabSkyDev.to_do_list.service;
 import com.GabSkyDev.to_do_list.dto.TaskRequestDTO;
 import com.GabSkyDev.to_do_list.dto.TaskResponseDTO;
 import com.GabSkyDev.to_do_list.mapper.TaskMapper;
+import com.GabSkyDev.to_do_list.model.Priority;
 import com.GabSkyDev.to_do_list.model.Task;
 import com.GabSkyDev.to_do_list.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,15 @@ public class TaskService {
         List<Task> taskList = taskRepository.findAll();
         return taskList.
                 stream()
+                .map(taskMapper::toResponse)
+                .toList();
+    }
+
+    // GET
+    public List<TaskResponseDTO> getTasksByPriority(Priority priority){
+        List<Task> listTaskPriority = taskRepository.findByPriority(priority);
+        return listTaskPriority
+                .stream()
                 .map(taskMapper::toResponse)
                 .toList();
     }
