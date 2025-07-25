@@ -3,6 +3,7 @@ package com.GabSkyDev.to_do_list.model;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "task_tb")
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
