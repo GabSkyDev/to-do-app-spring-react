@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f2f5;
+  color: #ffffff;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: row; /* Garante que a sidebar fique ao lado */
+  min-height: 100vh;
+}
+
+/* Barra lateral*/
+.sidebar {
+  width: 300px;
+  padding: 20px;
+  background: linear-gradient(180deg, #1e1e1e 0%, #2d2d2d 100%);
+  border-left: 1px solid #1c1f26;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar h1 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Conteúdo principal */
+.main-content {
+  flex: 1;
+  padding: 30px;
+  background: linear-gradient(180deg, #1c1f26 0%, #282c34 100%);
+
+}
+
+
+/* Lista de tarefas */
+li {
+  background-color: #fff;
+  color: #1c1f26;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  list-style: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+li h1 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+li h3 {
+  margin: 2px 0;
+  color: #555;
+}
+
+/* Botões */
+button {
+  margin-right: 10px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #1976d2;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #115293;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+input, select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* Etiquetas de prioridade */
+.priority-high {
+  background-color: #f44336; /* vermelho */
+  color: white;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.priority-medium {
+  background-color: #ffeb3b; /* amarelo */
+  color: #333;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.priority-low {
+  background-color: #4caf50; /* verde */
+  color: white;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+/* Etiquetas de estado */
+.status-pending {
+  background-color: #ff9800; /* laranja */
+  color: white;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.status-done {
+  background-color: #2e7d32; /* verde escuro */
+  color: white;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Linha superior com título e etiquetas lado a lado */
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.task-header h1 {
+  font-size: 21px;
+  font-weight: 600;
+}
+
+
+/* Agrupamento das etiquetas */
+.task-tags {
+  display: flex;
+  gap: 8px;
+}
+
+/* Espaçamento entre descrição e botões */
+.task-buttons {
+  margin-top: 15px;
+}
+
+.edit-mode {
+  background-color: #fffbe6;
+  border: 2px solid #ffb300;
+  padding: 15px;
+  border-radius: 8px;
+  color: #1c1f26;
+}
+
+.btn-edit {
+  background-color: #ff6f00;
+}
+
+.btn-edit:hover {
+  background-color: #e65100;
+}
+

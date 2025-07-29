@@ -9,13 +9,13 @@ import org.springframework.stereotype.Component;
 public class TaskMapper {
     public TaskResponseDTO toResponse(Task task){
         return new TaskResponseDTO(
+                task.getId(),
                 task.getName(),
                 task.getDescription(),
                 task.getState(),
                 task.getPriority()
         );
     }
-
     public Task toEntity(TaskRequestDTO requestDTO){
         return new Task(
                 requestDTO.id(),
