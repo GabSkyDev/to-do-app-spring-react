@@ -9,7 +9,7 @@
 ![version](https://img.shields.io/badge/version-1.0-purple.svg)
 
 Uma aplicação full-stack de gerenciamento de tarefas com interface moderna e funcionalidades completas de CRUD.  
-Ideal para quem deseja manter a produtividade ou aprender tecnologias web modernas com propósito prático.
+Ideal para quem deseja manter a produtividade ou guardar tarefas importantes do seu cotidiano
 
 ## 📌 Status do Projeto
 ✅ Finalizado (versão 1.0 pronta para uso)
